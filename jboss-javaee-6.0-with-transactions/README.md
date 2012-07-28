@@ -1,7 +1,10 @@
+JBoss Java EE 6 with Transactions
+=================================
+
 JBoss AS includes a world class transaction manager. In order to access it's full capabilites, including for example XTS, WS-AT and WS-BA, you need to use the JBossTS APIs.
  
 Usage
-=====
+-----
 
 To use the BOM, import into your dependency management:
 
@@ -10,7 +13,7 @@ To use the BOM, import into your dependency management:
             <dependency>
                 <groupId>org.jboss.bom</groupId>
                 <artifactId>jboss-javaee-6.0-with-transactions</artifactId>
-                <version>1.0.0.M12-redhat-1</version>
+                <version>1.0.1.CR1-redhat-1</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

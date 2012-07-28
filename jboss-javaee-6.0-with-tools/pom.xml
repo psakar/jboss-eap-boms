@@ -6,7 +6,7 @@
 
     <parent>
         <groupId>org.jboss.bom</groupId>
-        <version>1.0.0.M12-redhat-1</version>
+        <version>1.0.1.CR1-redhat-1</version>
         <artifactId>jboss-bom-parent</artifactId>
     </parent>
 
@@ -30,13 +30,13 @@
 
     <dependencyManagement>
 
-        <dependencies>
+        <dependencies>       
             <!-- JBoss distributes a complete set of Java EE 6 APIs including
                 a Bill of Materials (BOM). A BOM specifies the versions of a "stack" (or
                 a collection) of artifacts. We use this here so that we always get the correct
-                versions of artifacts. Here we use the jboss-javaee-web-6.0 stack (you can
-                read this as the JBoss stack of the Java EE Web Profile 6 APIs), and we use
-                version 3.0.0.Beta1 which is the latest release of the stack. You can actually
+                versions of artifacts. Here we use the jboss-javaee-6.0 stack (you can
+                read this as the JBoss stack of the Java EE 6 APIs), and we use
+                version 3.0.0.Final which is the latest release of the stack. You can actually
                 use this stack with any version of JBoss AS that implements Java EE 6, not
                 just JBoss AS 7! -->
             <dependency>
@@ -71,6 +71,40 @@
                 <scope>import</scope>
             </dependency>
 
+            <!-- Arquillian Drone adds support for visual testing of your application -->
+            <!-- <dependency>
+                <groupId>org.jboss.arquillian.extension</groupId>
+                <artifactId>arquillian-drone-bom</artifactId>
+                <version>${version.org.jboss.arquillian.extension.drone}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            -->
+
+            <!-- Arquillian Drone bindings for DefaultSelenium based browsers -->
+            <dependency>
+                <groupId>org.jboss.arquillian.extension</groupId>
+                <artifactId>arquillian-drone-selenium-depchain</artifactId>
+                <version>${version.org.jboss.arquillian.extension.drone}</version>
+                <type>pom</type>
+            </dependency>
+
+            <!-- Arquillian Drone bindings for WebDriver based browsers -->
+            <dependency>
+                <groupId>org.jboss.arquillian.extension</groupId>
+                <artifactId>arquillian-drone-webdriver-depchain</artifactId>
+                <version>${version.org.jboss.arquillian.extension.drone}</version>
+                <type>pom</type>
+            </dependency>
+
+            <!-- Arquillian Graphene is an enhanced tool based on Selenium allowing you to test AJAX more easily -->
+            <dependency>
+                <groupId>org.jboss.arquillian.graphene</groupId>
+                <artifactId>arquillian-graphene</artifactId>
+                <version>${version.org.jboss.arquillian.graphene}</version>
+                <type>pom</type>
+            </dependency>
+
             <!-- Arquillian support for JBoss AS7 container -->
             <!-- Note: Managed version of container allows Arquillian to control startup and shutdown of the container -->
             <dependency>
@@ -89,7 +123,7 @@
 
         </dependencies>
     </dependencyManagement>
-    
+
     <build>
         <pluginManagement>
             <plugins>

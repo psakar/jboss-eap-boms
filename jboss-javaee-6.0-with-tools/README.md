@@ -1,9 +1,12 @@
+JBoss Java EE 6 with tools recommended by JBoss
+===============================================
+
 Java EE lacks any testing APIs, and for this reason JBoss developed the Arquillian project, along with it's various component projects, such as Arquillian Drone, and the sister project Shrinkwrap. This BOM builds on the Java EE full profile BOM, adding Arquillian to the mix. It also provides a version of JUnit and TestNG recommended for use with Arquillian.
  
 Furthermore, this BOM adds the JBoss AS Maven deployment plugin. EAP 6's recommended mode of deployment is via the management APIs, and the Maven plugin is the recommended way to do this, if the customer is using Maven for building.
  
 Usage
-=====
+-----
 
 To use the BOM, import into your dependency management:
 
@@ -12,8 +15,8 @@ To use the BOM, import into your dependency management:
             <dependency>
                <groupId>org.jboss.bom</groupId>
                <artifactId>jboss-javaee-6.0-with-tools</artifactId>
-               <version>1.0.0.M12-redhat-1</version>
-               <type>pom</scope>
+               <version>1.0.1.CR1-redhat-1</version>
+               <type>pom</type>
                <scope>import</scope>
             </dependency>
         </dependencies>
@@ -34,7 +37,7 @@ Unfortunately, Maven doesn't allow you to specify plugin versions this way. To u
             <plugin>
                 <groupId>org.jboss.as.plugins</groupId>
                 <artifactId>jboss-as-maven-plugin</artifactId>
-                <version>7.1.0.Final</version>
+                <version>7.1.1.Final</version>
             </plugin>
         </plugins>
     </pluginManagement>
@@ -42,8 +45,7 @@ Unfortunately, Maven doesn't allow you to specify plugin versions this way. To u
 You'll need to take a look at the POM source in order to find the latest versions of plugins recommended.
 
 
-Deploying/undeploying your application to server
-------------------------------------------------
+### Deploying/undeploying your application to server
 
 To be able to easily deploy (or undeploy) your application from the application server, include following in the ``<build>`` section of your pom.xml file:
 	
@@ -56,8 +58,7 @@ To be able to easily deploy (or undeploy) your application from the application 
     
 You'll be able to deploy your application via `mvn package jboss-as:deploy`. See <https://github.com/jbossas/jboss-as-maven-plugin> for further information how to use the plugin.
 	
-Testing your application with Arquillian
-----------------------------------------
+###Testing your application with Arquillian
 
 To able to test your application with Arquillian, you have decide which type container you prefer. Arquillian allows you to choose 
 between a managed invocation, where it controls startup and shutdown of the container and a remote invocation, which connects to a running instance of JBoss AS.
@@ -95,7 +96,7 @@ Apart from setting a container, you need to choose a testing framework (e.g. JUn
     </dependency>
 
 *Note: Don't forget to set JBOSS_HOME environment variable so Arquillian will be able to find your container location.
-If you want to experiment with Arquillian settings, you can find plenty of information at <http://arqpreview-alrubinger.rhcloud.com/>*
+If you want to experiment with Arquillian settings, you can find plenty of information at <http://arquillian.org/>*
 
 Arquillian allows you to setup two distinct protocols for communication between Arquillian and application server, a Servlet
 based and a JMX based one. In order to have a protocol activated, you need to add its artifact into `<dependencies>` section and configure
@@ -134,8 +135,7 @@ Servlet protocol as default:
     </arquillian>
 
 
-Testing your application with Arquillian Drone
-----------------------------------------------
+### Testing your application with Arquillian Drone
 
 Arquillian Drone uses the very same setup as plain Arquillian. Arquillian Drone lets you choice between different Selenium bindings.
 Here we cover Arquillian Ajocado, for further binding please follow <https://docs.jboss.org/author/display/ARQ/Drone>.
