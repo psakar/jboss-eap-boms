@@ -15,7 +15,7 @@ To use the BOM, import into your dependency management:
             <dependency>
                <groupId>org.jboss.bom</groupId>
                <artifactId>jboss-javaee-6.0-with-tools</artifactId>
-               <version>1.0.1.CR1-redhat-1</version>
+               <version>1.0.1.Final-redhat-1</version>
                <type>pom</type>
                <scope>import</scope>
             </dependency>
@@ -138,18 +138,40 @@ Servlet protocol as default:
 ### Testing your application with Arquillian Drone
 
 Arquillian Drone uses the very same setup as plain Arquillian. Arquillian Drone lets you choice between different Selenium bindings.
-Here we cover Arquillian Ajocado, for further binding please follow <https://docs.jboss.org/author/display/ARQ/Drone>.
+Currently, we support three different Selenium based frameworks:
+    
+* Selenium DefaultSelenium - as known as Selenium 1.0
+* Selenium WebDriver - as known as Selenium 2.0
+* Arquillian Graphene - AJAX-enhanced Selenium 1.0 with a type safe API
 
-In order to use Arquillian with Arquillian Drone, include following dependency into your ``<dependencies>`` section:
+In order to use Arquillian Drone, include following dependency into your ``<dependencies>`` section. You can use one of the
+frameworks or include all of them together. More information about binding can be found at <https://docs.jboss.org/author/display/ARQ/Drone>:
 
+    <!-- Arquillian Drone with DefaultSelenium -->
     <dependency>
-        <groupId>org.jboss.arquillian.ajocado</groupId>
-        <artifactId>arquillian-ajocado-junit</artifactId>
-        <scope>test</scope>
+        <groupId>org.jboss.arquillian.extension</groupId>
+        <artifactId>arquillian-drone-selenium-depchain</artifactId>
         <type>pom</type>
+        <scope>test</scope>
     </dependency>
 
-*Note: Ajocado already contains a certified version of Selenium. Should you need to use a different version (for example to test your 
-application in a newer very new browser, compatible with the latest Selenium version only), you can get more information how to do that
+    <!-- Arquillian Drone with WebDriver -->
+    <dependency>
+        <groupId>org.jboss.arquillian.extension</groupId>
+        <artifactId>arquillian-drone-webdriver-depchain</artifactId>
+        <type>pom</type>
+        <scope>test</scope>
+    </dependency>
+
+    <!-- Arquillian Drone with Arquillian Graphene -->
+    <dependency>
+        <groupId>org.jboss.arquillian.graphene</groupId>
+        <artifactId>arquillian-graphene</artifactId>
+        <type>pom</type>
+        <scope>test</scope>
+    </dependency>
+
+*Note: Each of listed Arquillian Dependency Chains already contains a certified version of Selenium. Should you need to use a different version (for example to test your 
+application in a newer browser, compatible with the latest Selenium version only), you can get more information how to do that
 at <https://community.jboss.org/wiki/SpecifyingSeleniumVersionInArquillianDrone>*  
 
