@@ -120,6 +120,13 @@
                 <artifactId>jboss-as-arquillian-container-remote</artifactId>
                 <version>${version.org.jboss.as.arquillian.container}</version>
             </dependency>
+            
+            <!-- Specic version to make remoting compatible with EAP 6.0.1 when using jboss-as-maven-plugin -->
+            <dependency>
+                <groupId>org.jboss.remotingjmx</groupId>
+                <artifactId>remoting-jmx</artifactId>
+                <version>${version.org.jboss.remoting.jmx}</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>
