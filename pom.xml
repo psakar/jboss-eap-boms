@@ -13,7 +13,7 @@
 
     <groupId>org.jboss.bom</groupId>
     <artifactId>jboss-bom-parent</artifactId>
-    <version>1.0.1.Final-redhat-1</version>
+    <version>1.0.2.Final-redhat-1</version>
 
     <packaging>pom</packaging>
 
@@ -53,8 +53,9 @@
         <!-- Recommended versions of JBoss components.  Note that some version properties are
          |   inherited from jboss-parent for EAP.
          |-->
-        <version.org.jboss.arquillian>1.0.0.Final</version.org.jboss.arquillian>
-        <version.org.jboss.arquillian.extension.drone>1.0.0.Final</version.org.jboss.arquillian.extension.drone>
+        <!-- Inherited: <version.org.infinispan>5.1.2.FINAL</version.org.infinispan> -->
+        <version.org.jboss.arquillian>1.0.3.Final</version.org.jboss.arquillian>
+        <version.org.jboss.arquillian.extension.drone>1.1.0.Final</version.org.jboss.arquillian.extension.drone>
         <version.org.jboss.arquillian.graphene>1.0.0.Final</version.org.jboss.arquillian.graphene>
         <version.org.jboss.as.arquillian.container>7.1.1.Final</version.org.jboss.as.arquillian.container>
         <version.org.jboss.errai>2.0.0.Final</version.org.jboss.errai>
