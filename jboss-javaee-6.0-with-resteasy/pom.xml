@@ -10,11 +10,11 @@
         <artifactId>jboss-bom-parent</artifactId>
     </parent>
 
-    <artifactId>jboss-javaee-6.0-with-infinispan</artifactId>
+    <artifactId>jboss-javaee-6.0-with-resteasy</artifactId>
     <packaging>pom</packaging>
 
-    <name>JBoss Java EE 6 Specification APIs with Infinispan</name>
-    <description>Dependency Management for Java EE 6 Specification APIs with Infinispan</description>
+    <name>JBoss Java EE 6 Specification APIs with Resteasy</name>
+    <description>Dependency Management for Java EE 6 Specification APIs with Resteasy</description>
 
     <licenses>
         <license>
@@ -35,10 +35,9 @@
                 a Bill of Materials (BOM). A BOM specifies the versions of a "stack" (or 
                 a collection) of artifacts. We use this here so that we always get the correct 
                 versions of artifacts. Here we use the jboss-javaee-6.0 stack (you can read 
-                this as the JBoss stack of the Java EE 6 APIs), and we use version 3.0.2.Final 
-                which is the latest release of the stack. You can actually use this stack 
-                with any version of JBoss AS that implements Java EE 6, not just JBoss AS 
-                7! -->
+                this as the JBoss stack of the Java EE 6 APIs). You can actually use this 
+                stack with any version of JBoss AS that implements Java EE 6, not just JBoss 
+                AS 7! -->
             <dependency>
                 <groupId>org.jboss.spec</groupId>
                 <artifactId>jboss-javaee-6.0</artifactId>
@@ -47,19 +46,14 @@
                 <scope>import</scope>
             </dependency>
 
-
+            <!--  Resteasy BOM -->
             <dependency>
-                <groupId>org.infinispan</groupId>
-                <artifactId>infinispan-core</artifactId>
-                <version>${version.org.infinispan}</version>
+                <groupId>org.jboss.resteasy</groupId>
+                <artifactId>resteasy-bom</artifactId>
+                <version>${version.org.jboss.resteasy}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
-
-            <dependency>
-                <groupId>org.infinispan</groupId>
-                <artifactId>infinispan-client-hotrod</artifactId>
-                <version>${version.org.infinispan}</version>
-            </dependency>
-
         </dependencies>
     </dependencyManagement>
 

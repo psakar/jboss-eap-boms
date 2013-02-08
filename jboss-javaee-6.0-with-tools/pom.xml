@@ -6,7 +6,7 @@
 
     <parent>
         <groupId>org.jboss.bom</groupId>
-        <version>1.0.2.Final-redhat-1</version>
+        <version>1.0.4.Final</version>
         <artifactId>jboss-bom-parent</artifactId>
     </parent>
 
@@ -30,15 +30,15 @@
 
     <dependencyManagement>
 
-        <dependencies>       
-            <!-- JBoss distributes a complete set of Java EE 6 APIs including
-                a Bill of Materials (BOM). A BOM specifies the versions of a "stack" (or
-                a collection) of artifacts. We use this here so that we always get the correct
-                versions of artifacts. Here we use the jboss-javaee-6.0 stack (you can
-                read this as the JBoss stack of the Java EE 6 APIs), and we use
-                version 3.0.0.Final which is the latest release of the stack. You can actually
-                use this stack with any version of JBoss AS that implements Java EE 6, not
-                just JBoss AS 7! -->
+        <dependencies>
+            <!-- JBoss distributes a complete set of Java EE 6 APIs including 
+                a Bill of Materials (BOM). A BOM specifies the versions of a "stack" (or 
+                a collection) of artifacts. We use this here so that we always get the correct 
+                versions of artifacts. Here we use the jboss-javaee-6.0 stack (you can read 
+                this as the JBoss stack of the Java EE 6 APIs), and we use version 3.0.2.Final 
+                which is the latest release of the stack. You can actually use this stack 
+                with any version of JBoss AS that implements Java EE 6, not just JBoss AS 
+                7! -->
             <dependency>
                 <groupId>org.jboss.spec</groupId>
                 <artifactId>jboss-javaee-6.0</artifactId>
@@ -62,24 +62,24 @@
                 <version>${version.org.testng}</version>
             </dependency>
 
-            <!-- Add Arquillian Dependencies certified as a part of JBoss Web Framework Kit -->
+            <!-- Arquillian lets test you your applications in real environment -->
             <dependency>
-                <groupId>org.jboss.bom</groupId>
-                <artifactId>jboss-wfk-arquillian</artifactId>
-                <version>${project.version}</version>
+                <groupId>org.jboss.arquillian</groupId>
+                <artifactId>arquillian-bom</artifactId>
+                <version>${version.org.jboss.arquillian}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
 
-            <!-- Arquillian Drone adds support for visual testing of your application -->
-            <!-- <dependency>
+            <!-- Arquillian Drone adds support for visual testing of your 
+                application -->
+            <dependency>
                 <groupId>org.jboss.arquillian.extension</groupId>
                 <artifactId>arquillian-drone-bom</artifactId>
                 <version>${version.org.jboss.arquillian.extension.drone}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            -->
 
             <!-- Arquillian Drone bindings for DefaultSelenium based browsers -->
             <dependency>
@@ -97,7 +97,8 @@
                 <type>pom</type>
             </dependency>
 
-            <!-- Arquillian Graphene is an enhanced tool based on Selenium allowing you to test AJAX more easily -->
+            <!-- Arquillian Graphene is an enhanced tool based on Selenium 
+                allowing you to test AJAX more easily -->
             <dependency>
                 <groupId>org.jboss.arquillian.graphene</groupId>
                 <artifactId>arquillian-graphene</artifactId>
@@ -106,7 +107,8 @@
             </dependency>
 
             <!-- Arquillian support for JBoss AS7 container -->
-            <!-- Note: Managed version of container allows Arquillian to control startup and shutdown of the container -->
+            <!-- Note: Managed version of container allows Arquillian to 
+                control startup and shutdown of the container -->
             <dependency>
                 <groupId>org.jboss.as</groupId>
                 <artifactId>jboss-as-arquillian-container-managed</artifactId>
@@ -114,24 +116,22 @@
             </dependency>
 
             <!-- Arquillian support for JBoss AS7 container -->
-            <!-- Note: Remote version of container allows Arquillian to connect to already running container -->
+            <!-- Note: Remote version of container allows Arquillian to connect 
+                to already running container -->
             <dependency>
                 <groupId>org.jboss.as</groupId>
                 <artifactId>jboss-as-arquillian-container-remote</artifactId>
                 <version>${version.org.jboss.as.arquillian.container}</version>
             </dependency>
-            
-            <!-- Specific version to make remoting compatible with EAP 6.0.1 -->
-            <dependency>
-                <groupId>org.jboss.remotingjmx</groupId>
-                <artifactId>remoting-jmx</artifactId>
-                <version>${version.org.jboss.remoting.jmx}</version>
-            </dependency>
 
+            <!-- Older versions of Shrinkwrap don't automatically manage 
+                the version of Shrinkwrap depchain for us -->
+            <!-- TODO remove this when Arquillian upgrades to a newer shrinkwrap -->
             <dependency>
-                <groupId>org.jboss.remoting3</groupId>
-                <artifactId>jboss-remoting</artifactId>
-                <version>${version.org.jboss.remoting3}</version>
+                <groupId>org.jboss.shrinkwrap.resolver</groupId>
+                <artifactId>shrinkwrap-resolver-depchain</artifactId>
+                <type>pom</type>
+                <version>${version.org.jboss.shrinkwrap.resolver}</version>
             </dependency>
 
         </dependencies>
@@ -140,14 +140,16 @@
     <build>
         <pluginManagement>
             <plugins>
-                <!-- The Maven Surefire plugin tests your application. Here we ensure we are using a version compatible with Arquillian -->
+                <!-- The Maven Surefire plugin tests your application. Here 
+                    we ensure we are using a version compatible with Arquillian -->
                 <plugin>
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>${version.surefire.plugin}</version>
                 </plugin>
-                <!-- The JBoss AS plugin deploys your war to a local JBoss AS container -->
-                <!-- To use, set the JBOSS_HOME environment variable and run:
-                    mvn package jboss-as:deploy -->
+                <!-- The JBoss AS plugin deploys your war to a local JBoss 
+                    AS container -->
+                <!-- To use, set the JBOSS_HOME environment variable and 
+                    run: mvn package jboss-as:deploy -->
                 <plugin>
                     <groupId>org.jboss.as.plugins</groupId>
                     <artifactId>jboss-as-maven-plugin</artifactId>

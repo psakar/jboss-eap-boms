@@ -10,11 +10,11 @@
         <artifactId>jboss-bom-parent</artifactId>
     </parent>
 
-    <artifactId>jboss-javaee-6.0-with-logging</artifactId>
+    <artifactId>jboss-javaee-6.0-with-richfaces</artifactId>
     <packaging>pom</packaging>
 
-    <name>JBoss Java EE 6 Specification APIs with Logging Tools</name>
-    <description>Dependency Management for Java EE 6 Specification APIs with Logging Tools</description>
+    <name>JBoss Java EE 6 Specification APIs with Richfaces</name>
+    <description>Dependency Management for Java EE 6 Specification APIs with Richfaces</description>
 
     <licenses>
         <license>
@@ -47,26 +47,15 @@
                 <scope>import</scope>
             </dependency>
 
-            <!--  These dependencies are the jboss-logging tools magic -->
-            <!--  the jboss-logging-tools processor  -->
+            
+            <!-- RichFaces defines a Bill of Materials including dependencies which are not part 
+                 of Java EE 6 API -->
             <dependency>
-                <groupId>org.jboss.logging</groupId>
-                <artifactId>jboss-logging-processor</artifactId>
-                <version>${version.org.jboss.logging.processor}</version>
-            </dependency>
-      
-            <!--  jboss-logging API -->
-            <dependency>
-                <groupId>org.jboss.logging</groupId>
-                <artifactId>jboss-logging</artifactId>
-                <version>${version.org.jboss.logging}</version>
-            </dependency>
-
-            <!-- Define Log4j dependency and its version -->
-            <dependency>
-                <groupId>log4j</groupId>
-                <artifactId>log4j</artifactId>
-                <version>${version.log4j}</version>
+                <groupId>org.richfaces</groupId>
+                <artifactId>richfaces-bom</artifactId>
+                <version>${version.org.richfaces}</version>
+                <scope>import</scope>
+                <type>pom</type>
             </dependency>
         </dependencies>
     </dependencyManagement>

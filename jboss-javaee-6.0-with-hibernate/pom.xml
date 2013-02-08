@@ -6,7 +6,7 @@
 
     <parent>
         <groupId>org.jboss.bom</groupId>
-        <version>1.0.2.Final-redhat-1</version>
+        <version>1.0.4.Final</version>
         <artifactId>jboss-bom-parent</artifactId>
     </parent>
 
@@ -37,7 +37,7 @@
                 a collection) of artifacts. We use this here so that we always get the correct
                 versions of artifacts. Here we use the jboss-javaee-6.0 stack (you can
                 read this as the JBoss stack of the Java EE full Profile 6 APIs), and we use
-                version 3.0.0.Beta1 which is the latest release of the stack. You can actually
+                version 3.0.2.Final which is the latest release of the stack. You can actually
                 use this stack with any version of JBoss AS that implements Java EE 6, not
                 just JBoss AS 7! -->
             <dependency>
@@ -88,17 +88,17 @@
             <dependency>
                 <groupId>org.hibernate</groupId>
                 <artifactId>hibernate-c3p0</artifactId>
-                <version>4.1.3.Final</version>
+                <version>${version.org.hibernate}</version>
             </dependency>
             <dependency>
                 <groupId>org.hibernate</groupId>
                 <artifactId>hibernate-ehcache</artifactId>
-                <version>4.1.3.Final</version>
+                <version>${version.org.hibernate}</version>
             </dependency>
             <dependency>
                 <groupId>org.hibernate</groupId>
                 <artifactId>hibernate-proxool</artifactId>
-                <version>4.1.3.Final</version>
+                <version>${version.org.hibernate}</version>
             </dependency>
 
             <dependency>
@@ -139,8 +139,7 @@
             <dependency>
                 <groupId>org.hibernate</groupId>
                 <artifactId>hibernate-validator-annotation-processor</artifactId>
-                <!-- This jar is not supported in EAP, so use upstream version -->
-                <version>4.2.0.Final</version>
+                <version>${version.org.hibernate.validator}</version>
             </dependency>
 
             <dependency>

@@ -1,7 +1,7 @@
-JBoss Java EE 6 with OSGI
+JBoss Java EE 6 with Richfaces
 =========================
 
-This BOM builds on the Java EE full profile BOM, adding OSGI.
+This BOM builds on the Java EE full profile BOM, adding Richfaces.
   
 Usage
 -----
@@ -12,7 +12,7 @@ To use the BOM, import into your dependency management:
         <dependencies>
             <dependency>
                <groupId>org.jboss.bom</groupId>
-               <artifactId>jboss-javaee-6.0-with-osgi</artifactId>
+               <artifactId>jboss-javaee-6.0-with-richfaces</artifactId>
                <version>1.0.4.Final</version>
                <type>pom</type>
                <scope>import</scope>
