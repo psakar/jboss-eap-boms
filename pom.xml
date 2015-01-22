@@ -66,7 +66,7 @@
         <version.org.jboss.resteasy>2.3.8.SP4-redhat-2</version.org.jboss.resteasy>
         
         <!-- Picketlink -->
-        <version.org.picketlink>2.5.3.SP15-redhat-1</version.org.picketlink>
+        <version.org.picketlink>2.5.3.SP16-redhat-1</version.org.picketlink>
 
         <!-- JBossWeb, it is used in jboss security negotiation project -->
         <version.org.jboss.web>7.4.10.Final-redhat-1</version.org.jboss.web>
