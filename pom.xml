@@ -45,10 +45,7 @@
     <properties>
     
         <!-- ############    E   A   P    P r o d u c t   V e r s i o n s  ############# -->
-
-        <!-- Version of this BOM project, used for intermodule dependencies -->
-        <version.org.jboss.bom.eap>6.4.2-SNAPSHOT</version.org.jboss.bom.eap>
-
+        
         <!-- JBoss projects -->
         <version.org.jboss.jbossts.jbossjts>4.17.29.Final-redhat-1</version.org.jboss.jbossts.jbossjts>
         <version.org.jboss.logging>3.1.4.GA-redhat-2</version.org.jboss.logging>
@@ -59,9 +56,6 @@
         <!-- Hibernate -->
         <version.org.hibernate>4.2.19.Final-redhat-1</version.org.hibernate>
         <version.org.hibernate.validator>4.3.2.Final-redhat-2</version.org.hibernate.validator>
-
-        <!-- Hibernate Search -->
-        <version.org.hibernate.search>4.6.0.Final-redhat-2</version.org.hibernate.search>
 
         <!-- Hibernate 3 -->
         <version.org.hibernate3>3.6.10.Final</version.org.hibernate3>
@@ -115,7 +109,6 @@
     <modules>
         <module>jboss-javaee-6.0-with-hibernate</module>
         <module>jboss-javaee-6.0-with-hibernate3</module>
-        <module>jboss-javaee-6.0-with-hsearch</module>
         <module>jboss-javaee-6.0-with-logging</module>
         <module>jboss-javaee-6.0-with-osgi</module>
         <module>jboss-javaee-6.0-with-resteasy</module>
