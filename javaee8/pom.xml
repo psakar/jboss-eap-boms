@@ -396,6 +396,7 @@
     </dependencyManagement>
 
     <modules>
+        <module>javaee8-with-spring4</module>
         <module>javaee8-with-tools</module>
     </modules>
 
