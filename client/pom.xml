@@ -36,7 +36,7 @@
 
     <packaging>pom</packaging>
 
-    <name>WildFly BOMs: Client Aggregator</name>
+    <name>JBoss EAP BOMs: Client Aggregator</name>
 
     <modules>
         <module>ejb-client</module>

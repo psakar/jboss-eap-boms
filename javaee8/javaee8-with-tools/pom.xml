@@ -34,7 +34,7 @@
 
     <artifactId>jboss-eap-javaee8-with-tools</artifactId>
 
-    <name>WildFly BOMs: Java EE 8 with Tools</name>
+    <name>JBoss EAP BOMs: Java EE 8 with Tools</name>
     <description>Dependency Management for Java EE 8 Specification APIs with Deployment and Testing Tools</description>
 
     <licenses>

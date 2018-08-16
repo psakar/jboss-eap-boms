@@ -46,7 +46,7 @@
 
     <packaging>pom</packaging>
 
-    <name>WildFly BOMs: EJB Client</name>
+    <name>JBoss EAP BOMs: EJB Client</name>
 
     <description>
         This artifact provides a bill of materials (BOM) for remoting based EJB usage.

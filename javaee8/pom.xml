@@ -35,7 +35,7 @@
 
     <artifactId>jboss-eap-javaee8</artifactId>
 
-    <name>WildFly BOMs: Java EE 8</name>
+    <name>JBoss EAP BOMs: Java EE 8</name>
     <description>Java EE 8 Dependency Management</description>
 
     <licenses>

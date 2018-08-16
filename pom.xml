@@ -39,9 +39,9 @@
 
     <packaging>pom</packaging>
 
-    <name>WildFly BOMs: Parent Aggregator</name>
+    <name>JBoss EAP BOMs: Parent Aggregator</name>
 
-    <url>http://www.wildfly.org</url>
+    <url>http://www.jboss.org</url>
 
     <licenses>
         <license>
@@ -52,17 +52,17 @@
     </licenses>
 
     <scm>
-        <connection>scm:git:https://github.com/wildfly/boms.git</connection>
-        <developerConnection>scm:git:https://github.com/wildfly/boms.git</developerConnection>
-        <url>http://github.com/wildfly/boms</url>
+        <connection>scm:git:git@github.com:jboss-developer/jboss-eap-boms.git</connection>
+        <developerConnection>scm:git:git@github.com:jboss-developer/jboss-eap-boms.git</developerConnection>
+        <url>http://github.com/jboss-developer/jboss-eap-boms</url>
     </scm>
 
     <developers>
         <developer>
-            <id>wildfly.org</id>
-            <name>WildFly.org Community</name>
-            <organization>WildFly.org</organization>
-            <organizationUrl>http://www.wildfly.org</organizationUrl>
+            <id>jboss.org</id>
+            <name>JBoss.org Community</name>
+            <organization>JBoss.org</organization>
+            <organizationUrl>http://www.jboss.org</organizationUrl>
         </developer>
     </developers>
 

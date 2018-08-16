@@ -46,7 +46,7 @@
 
     <packaging>pom</packaging>
 
-    <name>WildFly BOMs: JMS Client</name>
+    <name>JBoss EAP BOMs: JMS Client</name>
 
     <description>
         This artifact provides a bill of materials (BOM) for JMS client usage.
