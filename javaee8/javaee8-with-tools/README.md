@@ -1,9 +1,9 @@
-Java EE 8 with tools recommended by WildFly
+Java EE 8 with tools recommended by JBoss EAP
 ===============================================
 
 Java EE lacks any testing APIs, and for this reason JBoss developed the Arquillian project, along with it's various component projects, such as Arquillian Drone, and the sister project Shrinkwrap. This BOM builds on the Java EE full profile BOM, adding Arquillian to the mix. It also provides a version of JUnit and TestNG recommended for use with Arquillian.
  
-Furthermore, this BOM adds the WildFly Maven deployment plugin. WildFly's recommended mode of deployment is via the management APIs, and the Maven plugin is the recommended way to do this, if the customer is using Maven for building.
+Furthermore, this BOM adds the WildFly Maven deployment plugin. JBoss EAP's recommended mode of deployment is via the management APIs, and the Maven plugin is the recommended way to do this, if the customer is using Maven for building.
  
 Usage
 -----
@@ -22,7 +22,7 @@ To use the BOM, import into your dependency management:
         </dependencies>
     </dependencyManagement>
 
-Unfortunately, Maven doesn't allow you to specify plugin versions this way. To use the plugins associated with "Java EE with Tools recommended by WildFly" BOM, add:
+Unfortunately, Maven doesn't allow you to specify plugin versions this way. To use the plugins associated with "Java EE with Tools recommended by JBoss EAP" BOM, add:
 
     <pluginManagement>
         <plugins>
@@ -31,7 +31,7 @@ Unfortunately, Maven doesn't allow you to specify plugin versions this way. To u
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${version.surefire.plugin}</version>
             </plugin>
-            <!-- The WildFly plugin deploys your war to a local WildFly container -->
+            <!-- The WildFly plugin deploys your war to a local JBoss EAP container -->
             <!-- To use, set the JBOSS_HOME environment variable and run:
                  mvn package wildfly:deploy -->
             <plugin>
@@ -61,11 +61,11 @@ You'll be able to deploy your application via `mvn package wildfly:deploy`. See 
 ###Testing your application with Arquillian
 
 To able to test your application with Arquillian, you have decide which type container you prefer. Arquillian allows you to choose 
-between a managed invocation, where it controls startup and shutdown of the container and a remote invocation, which connects to a running instance of WildFly.
+between a managed invocation, where it controls startup and shutdown of the container and a remote invocation, which connects to a running instance of JBoss EAP.
 See <https://docs.jboss.org/author/display/ARQ/Container+varieties> for further details. You may wish to set up two distint profiles, each using one type of
 the container.
  	
-To select WildFly managed container, following dependency has to be added into the `<dependencies>` section of your pom.xml file:
+To select JBoss EAP managed container, following dependency has to be added into the `<dependencies>` section of your pom.xml file:
 	
     <dependency>
         <groupId>org.wildfly.arquillian</groupId>
@@ -73,7 +73,7 @@ To select WildFly managed container, following dependency has to be added into t
         <scope>test</scope>
     </dependency>
 	
-Or for WildFly remote container:
+Or for JBoss EAP remote container:
 
     <dependency>
         <groupId>org.wildfly.arquillian</groupId>
@@ -125,11 +125,11 @@ Servlet protocol as default:
         <!-- Force the use of the Servlet 3.0 protocol with all containers, as it is the most mature -->
         <defaultProtocol type="Servlet 3.0" />
 
-        <!-- Example configuration for a managed/remote WildFly instance -->
+        <!-- Example configuration for a managed/remote JBoss EAP instance -->
         <container qualifier="jboss" default="true">
         <!-- If you want to use the JBOSS_HOME environment variable, just delete the jbossHome property -->
         <!--<configuration>-->
-        <!--<property name="jbossHome">/path/to/wildfly</property>-->
+        <!--<property name="jbossHome">/path/to/jboss/eap</property>-->
         <!--</configuration>-->
         </container>
     </arquillian>

@@ -1,10 +1,10 @@
-= WildFly BOMs
+= JBoss EAP BOMs
 
-The WildFly BOMs project provides Maven BOM files enhancing Java EE 8 with deployment and test tooling. These files manage the version of the dependencies you use in your project, ensuring you always get a compatible stack.
+The JBoss EAP BOMs project provides Maven BOM files enhancing Java EE 8 with deployment and test tooling. These files manage the version of the dependencies you use in your project, ensuring you always get a compatible stack.
 
 == Usage
 
-To use the BOM, import into your dependency management. For example, if you wanted "Java EE with WildFly", use:
+To use the BOM, import into your dependency management. For example, if you wanted "Java EE with JBoss EAP", use:
 
 [source, xml]
 ----
@@ -21,13 +21,13 @@ To use the BOM, import into your dependency management. For example, if you want
 </dependencyManagement> 
 ----
 
-Unfortunately, Maven doesn't allow you to specify plugin versions this way. The readme for each BOM calls out any plugin versions you should use. For example, to use the plugins associated with "Java EE with Tools recommended by WildFly":
+Unfortunately, Maven doesn't allow you to specify plugin versions this way. The readme for each BOM calls out any plugin versions you should use. For example, to use the plugins associated with "Java EE with Tools recommended by JBoss EAP":
 
 [source, xml]
 ----
 <pluginManagement>
     <plugins>
-        <!-- The WildFly Maven Plugin deploys your war to a local WildFly container -->
+        <!-- The WildFly Maven Plugin deploys your war to a local JBoss EAP container -->
         <!-- To use, set the JBOSS_HOME environment variable and run:
              mvn package wildfly:deploy -->
         <plugin>
