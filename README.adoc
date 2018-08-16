@@ -11,8 +11,8 @@ To use the BOM, import into your dependency management. For example, if you want
 <dependencyManagement>
     <dependencies>
         <dependency>
-            <groupId>org.wildfly.bom</groupId>
-            <artifactId>wildfly-javaee8</artifactId>
+            <groupId>org.jboss.bom</groupId>
+            <artifactId>jboss-eap-javaee8</artifactId>
             <scope>import</scope>
             <type>pom</type>
             <version>15.0.0.Alpha1-SNAPSHOT</version>

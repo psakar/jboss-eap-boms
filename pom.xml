@@ -29,8 +29,8 @@
         <version>28</version>
     </parent>
 
-    <groupId>org.wildfly.bom</groupId>
-    <artifactId>wildfly</artifactId>
+    <groupId>org.jboss.bom</groupId>
+    <artifactId>jboss-eap</artifactId>
     <!--
     Maintain separation between the artifact id and the version to help prevent
     merge conflicts between commits changing the GA and those changing the V.

@@ -22,8 +22,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.wildfly.bom</groupId>
-        <artifactId>wildfly</artifactId>
+        <groupId>org.jboss.bom</groupId>
+        <artifactId>jboss-eap</artifactId>
         <!--
         Maintain separation between the artifact id and the version to help prevent
         merge conflicts between commits changing the GA and those changing the V.
@@ -33,7 +33,7 @@
 
     <packaging>pom</packaging>
 
-    <artifactId>wildfly-javaee8</artifactId>
+    <artifactId>jboss-eap-javaee8</artifactId>
 
     <name>WildFly BOMs: Java EE 8</name>
     <description>Java EE 8 Dependency Management</description>
