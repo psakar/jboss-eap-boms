@@ -113,13 +113,13 @@
                  scope which manages dependency versions, but does not add the 
                  dependencies to the build classpath. -->
             <dependency>
-                <groupId>org.wildfly</groupId>
+                <groupId>org.jboss.eap</groupId>
                 <artifactId>wildfly-ejb-client-bom</artifactId>
                 <version>${project.version}</version>
                 <type>pom</type>
             </dependency>
             <dependency>
-                <groupId>org.wildfly</groupId>
+                <groupId>org.jboss.eap</groupId>
                 <artifactId>wildfly-jms-client-bom</artifactId>
                 <version>${project.version}</version>
                 <type>pom</type>
@@ -356,12 +356,12 @@
             </dependency>
 
             <dependency>
-                <groupId>org.wildfly</groupId>
+                <groupId>org.jboss.eap</groupId>
                 <artifactId>wildfly-clustering-singleton-api</artifactId>
                 <version>${version.server}</version>
             </dependency>
             <dependency>
-                <groupId>org.wildfly</groupId>
+                <groupId>org.jboss.eap</groupId>
                 <artifactId>wildfly-security-api</artifactId>
                 <version>${version.server}</version>
             </dependency>
