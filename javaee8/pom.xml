@@ -28,7 +28,7 @@
         Maintain separation between the artifact id and the version to help prevent
         merge conflicts between commits changing the GA and those changing the V.
         -->
-        <version>15.0.0.Alpha1-SNAPSHOT</version>
+        <version>7.2.0.GA-redhat-SNAPSHOT</version>
     </parent>
 
     <packaging>pom</packaging>
@@ -52,7 +52,7 @@
         <version.org.jboss.spec.jboss.javaee8>1.0.1.Final</version.org.jboss.spec.jboss.javaee8>
 
         <!-- Version of server -->
-        <version.server>14.0.1.Final</version.server>
+        <version.server>7.2.0.GA-redhat-SNAPSHOT</version.server>
 
         <!-- Versions on server's core -->
         <version.junit>4.12</version.junit>
