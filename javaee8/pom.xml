@@ -49,34 +49,34 @@
     <properties>
 
         <!-- Version of specs -->
-        <version.org.jboss.spec.jboss.javaee8>1.0.1.Final</version.org.jboss.spec.jboss.javaee8>
+        <version.org.jboss.spec.jboss.javaee8>1.0.1.Final-redhat-00001</version.org.jboss.spec.jboss.javaee8>
 
         <!-- Version of server -->
         <version.server>7.2.0.GA-redhat-SNAPSHOT</version.server>
 
         <!-- Versions on server's core -->
         <version.junit>4.12</version.junit>
-        <version.org.jboss.logging.jboss-logging>3.3.2.Final</version.org.jboss.logging.jboss-logging>
+        <version.org.jboss.logging.jboss-logging>3.3.2.Final-redhat-00001</version.org.jboss.logging.jboss-logging>
         <version.org.jboss.logging.jboss-logging-tools>2.1.0.Final</version.org.jboss.logging.jboss-logging-tools>
-        <version.org.wildfly.client.config>1.0.1.Final</version.org.wildfly.client.config>
-        <version.org.wildfly.common>1.4.0.Final</version.org.wildfly.common>
-        <version.org.wildfly.discovery>1.1.1.Final</version.org.wildfly.discovery>
-        <version.org.wildfly.security.elytron>1.6.0.Final</version.org.wildfly.security.elytron>
+        <version.org.wildfly.client.config>1.0.1.Final-redhat-00001</version.org.wildfly.client.config>
+        <version.org.wildfly.common>1.4.0.Final-redhat-1</version.org.wildfly.common>
+        <version.org.wildfly.discovery>1.1.1.Final-redhat-1</version.org.wildfly.discovery>
+        <version.org.wildfly.security.elytron>1.6.1.Final-redhat-00001</version.org.wildfly.security.elytron>
 
         <!-- Versions on server -->
-        <version.org.hibernate>5.3.6.Final</version.org.hibernate>
-        <version.org.hibernate.commons.annotations>5.0.4.Final</version.org.hibernate.commons.annotations>
-        <version.org.hibernate.search>5.10.3.Final</version.org.hibernate.search>
-        <version.org.hibernate.validator>6.0.13.Final</version.org.hibernate.validator>
-        <version.org.infinispan>9.3.1.Final</version.org.infinispan>
+        <version.org.hibernate>5.3.7.Final-redhat-00001</version.org.hibernate>
+        <version.org.hibernate.commons.annotations>5.0.4.Final-redhat-00001</version.org.hibernate.commons.annotations>
+        <version.org.hibernate.search>5.10.3.Final-redhat-00001</version.org.hibernate.search>
+        <version.org.hibernate.validator>6.0.13.Final-redhat-00001</version.org.hibernate.validator>
+        <version.org.infinispan>9.3.3.Final-redhat-00001</version.org.infinispan>
         <version.org.jboss.arquillian.core>1.1.13.Final</version.org.jboss.arquillian.core>
-        <version.org.jboss.ejb3.ext-api>2.2.0.Final</version.org.jboss.ejb3.ext-api>
-        <version.org.jboss.narayana>5.9.0.Final</version.org.jboss.narayana>
-        <version.org.jboss.resteasy>3.6.1.SP2</version.org.jboss.resteasy>
-        <version.org.jboss.security.jboss-negotiation>3.0.4.Final</version.org.jboss.security.jboss-negotiation>
-        <version.org.jboss.security.jbossxacml>2.0.8.Final</version.org.jboss.security.jbossxacml>
-        <version.org.picketbox.picketbox-commons>1.0.0.final</version.org.picketbox.picketbox-commons>
-        <version.org.picketlink>2.5.5.SP12</version.org.picketlink>
+        <version.org.jboss.ejb3.ext-api>2.2.0.Final-redhat-1</version.org.jboss.ejb3.ext-api>
+        <version.org.jboss.narayana>5.9.0.Final-redhat-00001</version.org.jboss.narayana>
+        <version.org.jboss.resteasy>3.6.1.SP2-redhat-00001</version.org.jboss.resteasy>
+        <version.org.jboss.security.jboss-negotiation>3.0.4.Final-redhat-1</version.org.jboss.security.jboss-negotiation>
+        <version.org.jboss.security.jbossxacml>2.0.8.Final-redhat-8</version.org.jboss.security.jbossxacml>
+        <version.org.picketbox.picketbox-commons>1.0.0.final-redhat-5</version.org.picketbox.picketbox-commons>
+        <version.org.picketlink>2.5.5.SP12-redhat-2</version.org.picketlink>
         <version.org.wildfly.arquillian>2.1.1.Final</version.org.wildfly.arquillian>
         <version.org.wildfly.plugin>1.2.1.Final</version.org.wildfly.plugin>
         <version.surefire.plugin>2.22.0</version.surefire.plugin>
