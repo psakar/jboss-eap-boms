@@ -192,6 +192,10 @@
             <artifactId>guava</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.jboss.eap</groupId>
+            <artifactId>wildfly-client-properties</artifactId>
+        </dependency>
 
     </dependencies>
 
