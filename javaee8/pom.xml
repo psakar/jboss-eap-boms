@@ -52,7 +52,7 @@
         <version.org.jboss.spec.jboss.javaee8>1.0.1.Final-redhat-00001</version.org.jboss.spec.jboss.javaee8>
 
         <!-- Version of server -->
-        <version.server>7.2.0.GA-redhat-00002</version.server>
+        <version.server>7.2.0.GA-redhat-00003</version.server>
 
         <!-- Versions on server's core -->
         <version.junit>4.12</version.junit>
